@@ -4,6 +4,7 @@ import Tweet from "./Tweet";
 import { useEffect } from "react";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "@/firebase";
+import Link from "next/link";
 
 function PostFeed() {
   const [tweets, setTweets] = useState([]);
@@ -25,10 +26,8 @@ function PostFeed() {
       <TweetInput />
 
       {tweets.map((tweet) => {
-        return <Tweet key={tweet.id} id={tweet.id} data={tweet.data()} />;
+        return <Tweet id={tweet.id} key={tweet.id} data={tweet.data()} />;
       })}
-
-      <Tweet />
     </div>
   );
 }
