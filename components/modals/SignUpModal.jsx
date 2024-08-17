@@ -10,6 +10,7 @@ import { auth } from "@/firebase";
 import { useEffect, useState } from "react";
 import { setUser } from "@/redux/userSlice";
 import { useRouter } from "next/router";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 function SignUpModal() {
   const isOpen = useSelector((state) => state.modals.signUpModalOpen);

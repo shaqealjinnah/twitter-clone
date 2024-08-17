@@ -16,26 +16,31 @@ import { auth } from "@/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { signOutUser } from "@/redux/userSlice";
 import { closeLoginModal, closeSignUpModal } from "@/redux/modalSlice";
+import Link from "next/link";
 
 export default function Sidebar() {
   const dispatch = useDispatch();
 
-  const user = useSelector(state => state.user)
+  const user = useSelector((state) => state.user);
 
   async function handleSignOut() {
     await signOut(auth);
     dispatch(signOutUser());
-    dispatch(closeSignUpModal())
-    dispatch(closeLoginModal())
+    dispatch(closeSignUpModal());
+    dispatch(closeLoginModal());
   }
 
   return (
     <div className="hidden sm:flex flex-col fixed h-full xl:ml-24">
       <nav className="xl:space-y-1.5 relative h-full">
         <div className="flex xl:p-3 py-3 justify-center items-center xl:justify-start">
-          <Image src={"/assets/twitter-logo.png"} width={34} height={34} />
+          <Link href="/">
+            <Image src={"/assets/twitter-logo.png"} width={34} height={34} />
+          </Link>
         </div>
-        <SidebarLink icon={<HomeIcon className="h-7" />} text={"Home"} />
+        <Link href="/">
+          <SidebarLink icon={<HomeIcon className="h-7" />} text={"Home"} />
+        </Link>
         <SidebarLink icon={<HashtagIcon className="h-7" />} text={"Explore"} />
         <SidebarLink
           icon={<BellIcon className="h-7" />}
@@ -51,7 +56,7 @@ export default function Sidebar() {
           icon={<DotsCircleHorizontalIcon className="h-7" />}
           text={"More"}
         />
-        <button className="hidden xl:inline bg-[#1d9bf0] rounded-full h-[52px] w-[200px] text-lg font-bold mt-2">
+        <button className="hidden cursor-not-allowed xl:inline bg-[#1d9bf0] rounded-full h-[52px] w-[200px] text-lg font-bold mt-2">
           Tweet
         </button>
         <div
@@ -76,7 +81,7 @@ export default function Sidebar() {
 
 function SidebarLink({ text, icon }) {
   return (
-    <li className="hoverAnimation flex mb-3 items-center text-xl space-x-3 xl:justify-start justify-center">
+    <li className="hoverAnimation cursor-not-allowed flex mb-3 items-center text-xl space-x-3 xl:justify-start justify-center">
       {icon}
       <span className="hidden xl:inline">{text}</span>
     </li>

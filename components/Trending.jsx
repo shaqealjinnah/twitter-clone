@@ -9,7 +9,7 @@ function Trending() {
         <SearchIcon className="text-gray-600 w-6" />
         <input
           placeholder="Search Twitter"
-          className="bg-transparent focus:outline-none placeholder:text-gray-600"
+          className="cursor-not-allowed bg-transparent focus:outline-none placeholder:text-gray-600"
         />
       </div>
       <div className="w-[300px] h-[500px] bg-white bg-opacity-10 rounded-3xl mt-3 ">
@@ -62,45 +62,45 @@ function Trending() {
             </div>
           </div>
 
-          <button className="bg-white text-black text-sm w-20 h-8 rounded-2xl font-bold">
+          <button className="bg-white cursor-not-allowed text-black text-sm w-20 h-8 rounded-2xl font-bold">
             Follow
           </button>
         </div>
         <div className="flex justify-between p-3">
           <div className="flex space-x-3">
             <img
-              src="/assets/bragg.png"
+              src="/assets/pfp.png"
               className="object-cover w-11 h-11 rounded-full"
             />
             <div>
               <div className="flex items-center space-x-1">
-                <h1 className="font-bold">David Bragg</h1>
+                <h1 className="font-bold">Elon Musk</h1>
                 <BadgeCheckIcon className="w-[18px] text-blue-400" />
               </div>
-              <h1 className="text-gray-500 text-[12px]">@davidbragg</h1>
+              <h1 className="text-gray-500 text-[12px]">@elonmusk</h1>
             </div>
           </div>
 
-          <button className="bg-white text-black text-sm w-20 h-8 rounded-2xl font-bold">
+          <button className="bg-white cursor-not-allowed text-black text-sm w-20 h-8 rounded-2xl font-bold">
             Follow
           </button>
         </div>
         <div className="flex justify-between p-3">
           <div className="flex space-x-3">
             <img
-              src="/assets/bragg.png"
+              src="/assets/kylie.png"
               className="object-cover w-11 h-11 rounded-full"
             />
             <div>
               <div className="flex items-center space-x-1">
-                <h1 className="font-bold">David Bragg</h1>
+                <h1 className="font-bold">Kylie Jenner</h1>
                 <BadgeCheckIcon className="w-[18px] text-blue-400" />
               </div>
-              <h1 className="text-gray-500 text-[12px]">@davidbragg</h1>
+              <h1 className="text-gray-500 text-[12px]">@kyliejenner</h1>
             </div>
           </div>
 
-          <button className="bg-white text-black text-sm w-20 h-8 rounded-2xl font-bold">
+          <button className="bg-white cursor-not-allowed text-black text-sm w-20 h-8 rounded-2xl font-bold">
             Follow
           </button>
         </div>
